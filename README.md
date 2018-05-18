@@ -1,49 +1,108 @@
-#General Introduction of Bitconnectcoin
-Bitconnect Coin is a secure and energy efficient PoW/PoS coin. Bitconnect Coin uses a faster PoW distribution mechanism to distribute the initial coins, then after few days the coin is basically transferred to a pure PoS coin, where the generation of the coin is mainly through the PoS interests.
+Amoveo
+==========
+[Español](docs/es/README.md)
 
-#Bitconnect Coin Specification
+(work in progress) [中文](docs/cn/README.md)
 
-Maximum 28 million BitConnect coin will ever exist to the community.
 
-bitconnect coin adopt a variable PoS rate that will be given periodically payout as per following list,
-- 1st 6 months -> 60% (10% per month)
-- 2nd 6 months -> 50% (8% per month)
-- 3rd 6 months -> 40% (7% per month)
-- 4th 6 months -> 30% (5% per month)
-- 5th 6 months -> 20% (3% per month)
-- 6th 6 months -> 10% (1.4 per month and ongoing.)
+Amoveo is a blockchain meant for enforcement of investment and insurance contracts.
 
-#How are they used?
-The BitConnect coins are used by bitconnect community members for bitconnect services and to store and invest the wealth in a non-government controlled currency. The BitConnect coins will also be used  as payment system on number of BitConnect partner websites.
 
-#How are they produced?
-BitConnect coin uses a special algorithm called the POW/POS to secure the BitConnect Coin network. The moment you acquire BitConnect Coin it becomes an interest bearing asset with 120% return per year through PoS minting. All you have to do to earn with this method is to hold coins in your Bitconnect-QT wallet. In addition to PoS minting, BitConnect coin can be mined with CPU/GPU and does not need an ASIC miner like Bitcoin does.
+Amoveo contracts are enforced using state-channels. This means fees are low, contracts are nearly instant and can support a global audience.
 
-#Download Wallet
-<b>HOW TO SET UP BITCONNECT COIN WALLET ON WINDOWS OPERATING SYSTEM?</b>
+Amoveo has oracle technology.
+Amoveo can learn facts about our world and enforce the outcome of contracts that are governed by these facts.
+This, for example, enables you to bet on the price of Amazon shares.
 
-A “BitConnect wallet” is basically the BitConnect Coin Account, which allows you to receive BitConnect Coin, store them, and then send them to others.
+The variables that define how to participate in Amoveo can be modified by the Amoveo community using a built-in process.
+This way Amoveo will always stay optimally tuned to produce the best results.
 
-<b>Click here : http://www.bitconnectcoin.co/wallet/bitconnect-wallet.zip</b>
-- Unzip the wallets files.
-- You will get bitconnect.exe file, Install the wallet software by double click on bitconnect.exe file.
-- You can now send and receive BitConnect Coin directly from BitConnect Desktop Wallet and also use this wallet to stake BitConnect Coin.
 
-<b> HOW TO SET UP BITCONNECT COIN WALLET ON LINUX OPERATING SYSTEM?</b> 
+[Amoveo whitepaper](docs/white_paper.md).
 
-<b>Click here : http://www.bitconnectcoin.co/wallet/bitconnect-linux-qt.zip</b>
+Amoveo main net was launched at 11:00 AM GMT on March 2, 2018.
 
-- Open linux terminal and go to destination path of downloaded directory.
-- Unzip the wallets files using command unzip wallet_file.zip -d destination_folder.
-- execute the wallet file using command ./bitconnect-linux-qt.
+## Community
+[Amoveo forum on reddit](https://www.reddit.com/r/Amoveo/)
 
-<b>HOW TO SET UP BITCONNECT COIN WALLET ON MAC OS X OPERATING SYSTEM?</b>
+[Amoveo announcements on twitter](https://twitter.com/zack_bitcoin)
 
-<b>Click here : https://bitconnectcoin.co/wallet/bitconnect-mac.zip?v=154545</b>
+[Amoveo on Telegram](https://t.me/amoveo)
 
-- Unzip the wallets files.
-- You will get bitconnect-qt.dmg file, Install the wallet software by double click on bitconnect-qt.dmg file.
-- You can now send and receive BitConnect Coin directly from BitConnect Desktop Wallet and also use this wallet to stake BitConnect   Coin.
+[Amoveo on Discord](https://discord.gg/a52szJw)
 
+[Statistics page to see historic difficulty, blocktime, hashrate, and more.](https://jimhsu.github.io/amoveo-stats/)
+
+[Veoscan explorer. Nodes, blocks, txs, markets, holders, and more.](http://veoscan.io/)
+
+
+## Light node
+Simply visit [this webpage](http://159.65.120.84:8080/wallet.html) to participate in Amoveo, no installation necessary.
+
+You can also download the javascript light node to ensure you have the secure version, and to be able to run in cold storage. To use the javascript light node open this file with your browser: `apps/amoveo_http/priv/external_web/wallet.html`
+
+This light node downloads headers and verifies the proof of work.
+It verifies the merkle proofs for all blockchain state you download to ensure security equivalent to a full node, provided you wait for enough confirmations.
+You can use the light node to participate in [markets](docs/light_node/market.md).
+A light node that currently has markets is [here](http://159.89.106.253:8080/wallet.html).
+And the interface to look at the markets is [here](http://159.89.106.253:8080/explorer.html).
+
+
+## Block Explorer
+The block explorer for the network is [here](http://159.65.120.84:8080/explorer.html).
+
+Another explorer is [here](http://159.89.106.253:8080/explorer.html). This one has some markets where you can gamble.
+
+
+## Full node
+[Launch an erlang full node and connect to the network](docs/getting-started/turn_it_on.md)
+[Issue commands to your full node](docs/api/commands.md)
+Commands such as:
+* turning the node off without corrupting the database.
+* looking up information from the blockchain or it's history.
+* making a server that collects fees by routing payments or making markets
+* participating in the oracle mechanism or governance mechanism.
+
+## Mining
+
+[Here is a miner for Nvidia GPU, it works for linux and windows](https://github.com/Mandelhoff/AmoveoMinerGpuCuda)
+
+It uses SHA256 like bitcoin. But it is a little different, so bitcoin ASICs cannot be used to mine Amoveo.
+Full node keys are stored in `_build/prod/rel/amoveo_core/keys/keys.db`
+
+Here is a list of mining pools you can connect your miner to:
+
+http://159.65.120.84:8085/main.html
+
+http://amoveopool2.com/pool
+
+http://amoveo.noncense.tech/
+
+
+## Trading
+
+There are people trading now on discord https://discord.gg/xJQcVaT
+
+An exchange is being written here https://github.com/zack-bitcoin/amoveo-exchange
+
+
+## Software to launch a new mining pool
+If your full node is on a different machine from your miner, you will need a mining pool. [Mining pool software can be found here.](https://github.com/zack-bitcoin/amoveo-mining-pool)
+The "master" branch is for paying out small amounts to each miner with each block.
+The "classic" version only pays a miner when they find a block.
+
+
+## Developers
+
+If you want to build on top of Amoveo [read the develper's guide](docs/getting-started/quick_start_developer_guide.md)
+
+
+## Donations
+
+```
+Bitcoin Donations: 1C5Qq5i4uUyEm84GAZ3iAUFgbVAhbCirwj
+Veo donations: BGH+3P768A9cSNR3GLSRXgsokSL/Jdbm+rOJogbgiPxq8M+J2R4nVxZ+Hj6WdI4rMsq6nPzkMh77WGBCMx89HUM=
+Gifts must be less than $10 000 per person per year.
+```
 
 
